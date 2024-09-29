@@ -1,0 +1,372 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100svh;
+}
+
+a {
+    text-align: center;
+    display: block;
+}
+
+#users_offers_box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    padding: 6rem 2rem;
+    max-width: 1140px;
+    margin: 0 auto;
+    flex-grow: 1;
+    width: 100%;
+}
+
+#users_offers_box .user_offer_box {
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    max-height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 1rem;
+    row-gap: 1rem;
+}
+
+#users_offers_box .user_offer_box_image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 210px;
+    height: 280px;
+    cursor: pointer;
+
+}
+
+#users_offers_box .user_offer_box_content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#users_offers_box .user_offer_box_content_button_div {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#users_offers_box .user_offer_box_content a p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #A89887;
+}
+
+#users_offers_box .user_offer_box_content_price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #A89887;
+}
+
+#users_offers_box .user_offer_box_content_button {
+    background-color: transparent;
+    border: 1px solid #A89887;
+    color: #000;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 400;
+    overflow: hidden;
+    padding: 0.2rem 0.2rem;
+    text-align: center;
+    transition: all 0.4s ease-in-out;
+    vertical-align: middle;
+    outline: none;
+    text-transform: capitalize;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    width: 60%;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+#users_offers_box .user_offer_box_content_button:hover {
+    background-color: #A89887;
+    border: 1px solid #A89887;
+    color: #fff;
+    border-radius: 10px;
+}
+
+#users_offers_box p {
+    font-size: 16px;
+    font-weight: normal;
+    color: #A89887;
+    text-align: center;
+}
+
+div[class*='modal-box'] {
+    visibility: hidden;
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0%;
+    height: 0%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.88);
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.close-modal-box {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #A89887;
+    font-size: 32px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.delete-box-wrapper {
+    display: none;
+    flex-direction: column;
+    row-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 6rem;
+}
+
+.change-price-box-wrapper {
+    display: none;
+    flex-direction: column;
+    row-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 6rem;
+}
+
+.delete-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.delete-title {
+    font-size: 18px;
+    font-weight: normal;
+    color: #fff;
+}
+
+.delete-popup {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 4rem;
+    width: 50%;
+}
+
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 4rem;
+    width: 50%;
+}
+
+.confirm-delete,
+.confirm-change-price {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    border: 1px solid #A88E87;
+    background-color: transparent;
+    color: #F5E9DC;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out !important;
+    width: 30%;
+}
+
+.cancel-delete,
+.cancel-change-price {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    border: 1px solid #A88E87;
+    background-color: #F5E9DC;
+    color: #A88E87;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out !important;
+    width: 30%;
+}
+
+.confirm-delete:hover,
+.confirm-change-price:hover {
+    transform: scale(1.1);
+    color: #F5E9DC;
+    background-color: transparent;
+}
+
+.cancel-delete:hover,
+.cancel-change-price:hover {
+    transform: scale(1.1);
+}
+
+.offer-image {
+    display: none;
+    max-width: 512px;
+    width: 92%;
+    margin: 0 auto;
+}
+
+button {
+    color: #A88E87;
+}
+
+.user_offer_image_button {
+    background-color: #F5E9DC;
+    border: 1px solid #A89887;
+    color: #000;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 400;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+    outline: none;
+    text-transform: capitalize;
+    border-radius: 5px;
+    width: 24%;
+    transition: all 0.5s ease-in-out;
+    padding: 0.5rem 1rem
+}
+
+.user_offer_image_button:hover {
+    background-color: transparent;
+    border: 1px solid #A89887;
+    transform: scale(1.1);
+}
+
+.price_input {
+    width: 50% !important;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    line-height: 1;
+    font-weight: 400px;
+    font-size: 1.4rem;
+    color: #A89887;
+    margin: 14px 0;
+    border: 1px solid #F5E9DC;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    transition: border 0.5s ease-in-out;
+}
+
+.price_input:focus {
+    border: 1px solid #A89887;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+@media only screen and (max-width: 1368px) {
+
+    .confirm-delete,
+    .confirm-change-price {
+        width: 50%;
+    }
+
+    .cancel-delete,
+    .cancel-change-price {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    #users_offers_box {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .price_input {
+        width: 80% !important;
+    }
+}
+
+@media only screen and (max-width:750px) {
+    #users_offers_box {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .modal-box>div {
+        padding: 0;
+    }
+
+    .input-wrapper {
+        width: 80%;
+    }
+
+    .button-wrapper {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width:680px) {
+    #users_offers_box {
+        min-height: 508px;
+    }
+}
+
+@media only screen and (max-width:520px) {
+    #users_offers_box {
+        grid-template-columns: 1fr;
+        padding: 6rem 3rem;
+    }
+
+    .delete-text {
+        font-size: 22px;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    .delete-title {
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    #users_offers_box {
+        min-height: 460px;
+    }
+
+}

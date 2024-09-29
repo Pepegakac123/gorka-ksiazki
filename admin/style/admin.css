@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+body{
+    margin:0;
+    background-color: #F5E9DC;
+    padding: 0 2%;
+}
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+p{
+    margin: 0;
+}
+h1
+{
+    color: #513939;
+    text-align: center;
+    font-size: 32px;
+}
+.login_main{
+    height: 100svh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.input_box input{
+    width: 250px;
+    height:40px;
+    padding: 10px 5px;
+    outline: none;
+    border-radius: 8px;
+    border:1px solid #513939;
+    font-size: 16px;
+}
+.input_box{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 160px;
+}
+button{
+    outline: none;
+    border:1px solid #513939;
+    background-color:#513939;
+    border-radius: 8px;
+    color:#fff;
+    padding:8px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    height: 40px;
+}
+.error{
+    color: red;
+    text-align: center;
+    margin: 0;
+    font-size: 14px;
+    visibility: hidden;
+}
+/* admin.php */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+nav{
+    position: relative;
+}
+#sign_out{
+    position:absolute;
+    top:6px;
+    right: 0;
+    height: 35px;
+    padding:4px 8px;
+}
+.admin_main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+}
+h2{
+    color: #513939;
+    margin: 0;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding:20px 0;
+    border-top: 1px solid rgb(82, 81, 81);
+}
+.box input{
+    font-size:14px;
+    border: 1px solid #513939 ;
+    border-radius: 8px;
+    outline: none;
+    padding:4px 8px;
+    width: 100px;
+}
+.confirmation_box{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width:300px;
+    background-color:#F5E9DC;
+    border: 2px solid #513939;
+    border-radius:8px;
+    padding:8px 16px;
+}
+.confirmation_box h3{
+    text-align: center;
+    color:#513939;
+    margin: 0;
+    font-size: 20px;
+}
+.confirmation_box p{
+    text-align: center;
+    margin: 10px 0;
+}
+.confirmation_box .button_box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.confirmation_box .button_box button{
+    width: 120px;
+}
+.info{
+    position: fixed;
+    top: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width:300px;
+    background-color:#F5E9DC;
+    border: 2px solid #513939;
+    border-radius:8px;
+    padding:8px 16px;
+}
+#delete_offer{
+    margin-top: 10px;
+}
+.result{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color:#F5E9DC;
+    border: 2px solid #513939;
+    border-radius:8px;
+    max-height: 70svh;
+    padding:8px 16px;
+    max-width: 90%;
+    overflow: scroll;
+}
+.result > button{
+    position: absolute;
+    right: 16px;
+}
+/* dodawanie oferty */
+.book_data{
+    max-width: 800px;
+    width: 100%;
+}
+.line{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 4px;
+}
+.data_box{
+    width: 48%;
+}
+.data_box input{
+    width: 100%;
+}
+.data_box h4{
+    width: 100%;
+    margin: 0;
+    color: #513939;
+    text-align: center;
+}
+.special-line{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.special-line > .data_box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+label
+{
+    display: flex;
+    cursor: pointer;
+}
+select{
+    outline: none;
+    cursor: pointer;
+}
+#category{
+    width: 125px;
+}
+#part{
+    width: 50px;
+}
+textarea{
+    font-size:14px;
+    width: 96%;
+    max-width: 800px;
+    outline: none;
+    margin: 8px 0;
+}
+.images-container {
+    padding: 1rem;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.images-container h4{
+    text-align: center;
+    margin: 8px;
+}
+.dragger_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dragger_wrapper .imgnote {
+    font-size: 12px;
+    font-weight: medium;
+    color: #A88E87;
+
+}
+
+.dragger_wrapper h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.dragger {
+    width: 200px;
+    height: 284px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px dashed #fbfbfb;
+    border-radius: 5px;
+    background-color: #A88E87;
+}
+
+.dragger.active {
+    border: 2px dashed #000000;
+}
+
+.dragger img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.fileName {
+    padding: 5px;
+    width: 100%;
+    margin: 10px 0 0 0;
+    color: #A88E87;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+.fileName p{
+    font-size: 10px;
+}
+
+.fa-trash-can {
+    color: #A88E87;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.icon {
+    color: #ffffff;
+    
+    margin: 10px 0;
+}
+
+.fa-images {
+    color: #F5E9DC;
+    cursor: pointer;
+    font-size: 45px;
+    transition: all 0.5s ease-in-out;
+}
+
+.fa-images:hover {
+    color: #fff;
+    cursor: pointer;
+    font-size: 45px;
+}
+
+@media (max-width: 768px) {
+    h1{
+        font-size:24px;
+        text-align: left;
+    }
+    button{
+        font-size:12px;
+    }
+    #sign_out{
+        top: 0;
+    }
+    h2{
+        font-size:20px;
+    }
+    h1.loginh1{
+        text-align: center;
+    }
+    .special-line{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width: 500px) {
+    h1{
+        font-size:20px;
+    }
+    button{
+        font-size:11px;
+    }
+    #sign_out{
+        top: 0;
+        height: 30px;
+    }
+}

@@ -1,0 +1,20 @@
+### PROTECT FILES ###
+<FilesMatch "\.(htaccess|htpasswd|ini|fla|psd|log|sh)$">
+Order Allow,Deny
+Deny from all
+</FilesMatch>
+
+RewriteEngine on
+RewriteRule strona-glowna index.php
+RewriteRule strona-logowania login_page.php
+RewriteRule oferta single_offer.php
+RewriteRule lista-ofert offer_page.php
+RewriteRule oferty-uzytkownika all_from_user.php
+RewriteRule dane-uzytkownika user_panel/user_data.php
+RewriteRule wiadomosci user_panel/chat.php
+RewriteRule dodaj-oferte user_panel/add_offer_page.php
+RewriteRule twoje-oferty user_panel/active_users_offers.php
+RewriteRule admin-panel admin/admin.php
+RewriteRule admin-logowanie admin/admin_login_page.php
+RewriteRule odzyskaj-haslo recover_password.php
+RewriteRule zresetuj-haslo reset_password.php

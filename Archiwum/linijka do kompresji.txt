@@ -1,0 +1,1 @@
+!!!!!!! LINIJKA DO PHP.INI: extension=php_gd.dll , trzeba to wkleić tam żeby wam dodawanie ofert działało, bo dodałem kompresje

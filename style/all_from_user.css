@@ -1,0 +1,56 @@
+p {
+    font-size: 16px;
+    font-weight: normal;
+    color: #A89887;
+    text-align: center;
+}
+
+.user_offer_image_button {
+    background-color: #F5E9DC;
+    border: 1px solid #A89887;
+    color: #000;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 400;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+    outline: none;
+    text-transform: capitalize;
+    border-radius: 5px;
+    width: 24%;
+    transition: all 0.3s ease-in-out;
+    padding: 0.5rem 1rem
+}
+
+.user_offer_image_button:hover {
+    background-color: transparent;
+    border: 1px solid #A89887;
+    transform: scale(1.1);
+}
+
+section .user_offer_box_content_button {
+    background-color: transparent;
+    border: 1px solid #A89887;
+    color: #000;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 400;
+    overflow: hidden;
+    padding: 1rem 3rem;
+    text-align: center;
+    transition: all 0.4s ease-in-out;
+    vertical-align: middle;
+    outline: none;
+    text-transform: capitalize;
+    border-radius: 5px;
+    width: 80%;
+    transition: all 0.5s ease-in-out;
+}
+
+section .user_offer_box_content_button:hover {
+    background-color: #F5E9DC;
+    border: 1px solid #F5E9DC;
+    color: #000;
+    border-radius: 10px;
+}

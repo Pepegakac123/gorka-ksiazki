@@ -1,0 +1,491 @@
+html,
+body {
+    scroll-behavior: smooth
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    font-weight: 400px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #513939;
+    font-weight: normal;
+    line-height: 20px;
+}
+
+
+body {
+    background-color: #fff !important;
+}
+
+p {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #A89887;
+}
+
+.nav-container {
+    border-bottom: none;
+}
+
+ul.chat-menu {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 2rem;
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+ul.chat-menu>li {
+    color: #A89887;
+    transition: color 0.3s ease-in-out;
+}
+
+ul.chat-menu>li:hover {
+    color: #513939;
+    cursor: pointer;
+}
+
+ul.chat-menu>li a.active_messages {
+    font-weight: 700;
+    color: #A89887
+}
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    height: 100%;
+    padding: 4rem 4rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    column-gap: 2rem;
+}
+
+.customer_box {
+    width: 100%;
+    color: white;
+    overflow-y: scroll;
+    height: 50svh;
+    border: 2px solid #F5E9DC;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    padding: 2rem 2rem;
+    min-height: 100%;
+}
+
+.customer_box::-webkit-scrollbar {
+    width: 0.8em;
+    background-color: #F5F5F5;
+}
+
+.customer_box::-webkit-scrollbar-thumb {
+    background-color: rgb(206, 187, 167);
+    border-right: none;
+    border-left: none;
+}
+
+.customer_box::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(245, 233, 220, 1);
+    border-radius: 20px;
+    background: transparent;
+}
+
+.offer_info_wrapper {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #A89887;
+    width: 100%;
+    row-gap: 2rem;
+    border-radius: 8px 8px 0 0;
+}
+
+.offer_info_wrapper .offer_info {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.offer_info_wrapper .offer_info .buyer_name {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #A89887;
+}
+
+.buyer_name a {
+    color: #A89887;
+    font-weight: bold;
+}
+
+.buyer_name a:hover {
+    color: #6a5f54;
+}
+
+.offer_info_wrapper .offer_info .offer_info_chatbtn {
+    width: 24px;
+    height: 24px;
+    fill: #A89887;
+    cursor: pointer;
+}
+
+.lovely_p {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    column-gap: 1rem;
+    cursor: pointer;
+}
+
+.lovely_p:hover {
+    color: #6a5f54;
+}
+
+.offer_info_wrapper .offer_info_book_price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.offer_info_wrapper .offer_info_book_price p.offer_book {
+    font-size: 14px;
+    font-weight: normal;
+    text-transform: none;
+    color: #A89887;
+}
+
+.offer_info_wrapper .offer_info_book_price p.offer_price {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: none;
+    color: #000;
+}
+
+.offer_info_wrapper .offer_info_sum {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #A89887;
+    padding: 2rem;
+    width: 100%;
+    padding: 1rem;
+}
+
+.offer_info_wrapper .offer_info_sum p.offer_price_sum {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #000;
+}
+
+.offer_info_wrapper .offer_info_sum p.offer_sum {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #000;
+}
+
+.operation_btn_wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.operation_btn {
+    border: 1px solid #A89887;
+    background-color: transparent;
+    color: #6a5f54;
+    padding: 0.5rem 0.2rem;
+    font-weight: bold;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+    transition: all 0.3s ease-in-out
+}
+
+.operation_btn:hover {
+    background-color: #6a5f54;
+    color: #fff;
+    cursor: pointer;
+}
+
+.operation_box_break {
+    height: 16px;
+    width: 1px;
+    margin: 0 4px;
+    background: #6a5f54;
+}
+
+.chat_box {
+    width: 100%;
+    color: white;
+    height: 50vh;
+    border: 2px solid #F5E9DC;
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr 8fr 1fr;
+    min-height: 100%;
+}
+
+.chat-msg-container {
+    width: 100%;
+    color: white;
+    overflow-y: scroll;
+    height: 100%;
+    padding: 2rem 2rem;
+    border-radius: 0;
+}
+
+.chat_box .chat_user_box {
+    width: 60%;
+    justify-self: center;
+    align-self: center;
+    border-bottom: 2px solid #F5E9DC;
+}
+
+.chat_box .chat_user_box p {
+    font-size: 16px;
+    color: #A89887;
+    text-transform: capitalize;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.chat_box .input_box {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    z-index: 1;
+    grid-template-columns: 90% 10%;
+}
+
+.chat_user_box_name {
+    font-weight: bold;
+}
+
+.chat_messages {
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.chat_messages .sent-message {
+    text-align: left;
+    font-size: 13px;
+    max-width: 75%;
+    width: fit-content;
+    align-self: flex-end;
+    word-wrap: break-word;
+    padding: 1rem;
+    border-radius: 20px 20px 0px 20px;
+    background-color: rgb(245, 233, 220);
+}
+
+.chat_messages .recived-message {
+    text-align: left;
+    font-size: 13px;
+    outline: 2px solid rgb(245, 233, 220);
+    max-width: 75%;
+    width: fit-content;
+    align-self: flex-start;
+    word-wrap: break-word;
+    padding: 1rem;
+    border-radius: 20px 20px 0px 20px;
+    background-color: transparent;
+}
+
+.input_box input {
+    width: 100%;
+    outline: none;
+    color: #A89887;
+    border: none;
+    border-top: 2px solid #F5E9DC;
+    padding: 1rem;
+    font-size: 16px;
+}
+
+.input_box input:disabled {
+    cursor: not-allowed;
+}
+
+#message_send {
+    background-color: #fff;
+    border: none;
+    border-top: 2px solid #F5E9DC;
+    border-left: 2px solid #F5E9DC;
+    display: grid;
+    place-content: center;
+}
+
+#message_send:hover {
+    cursor: pointer;
+}
+
+
+#message_send::after {
+    content: '';
+    width: 28px;
+    height: 28px;
+    display: block;
+    background-image: url("../images/send.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+b {
+    font-size: 12px;
+    color: #513939;
+    font-weight: bold;
+    margin: 10px 0;
+    display: grid;
+    place-content: center;
+}
+
+@media only screen and (max-width:1000px) {
+    .container {
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+        padding: 2rem 1rem;
+    }
+
+    .customer_box {
+        height: auto;
+        min-height: auto;
+    }
+
+    footer {
+        height: 170px;
+        width: 100%;
+        background-color: #F5E9DC;
+        position: static;
+    }
+
+    .chat_messages .recived-message,
+    .chat_messages .sent-message {
+        font-size: 11px;
+        padding: 0.5rem 1rem;
+    }
+
+    b {
+        font-size: 10px;
+    }
+
+    .input_box input {
+        font-size: 13px;
+    }
+
+    .chat-msg-container {
+        padding: 10px;
+    }
+
+    .chat_box .chat_user_box p {
+        font-size: 14px;
+    }
+
+    @media only screen and (max-width:550px) {
+        ul>li>a {
+            font-size: 15px;
+        }
+
+        .container {
+            padding: 2rem 1rem 2rem 1rem;
+        }
+
+        ul.chat-menu>li a.change_customer_box {
+            font-size: 13px;
+        }
+
+        .offer_info_wrapper div.offer_info {
+            padding: 5px;
+        }
+
+        div.offer_info p,
+        div.offer_info a {
+            font-size: 12px;
+        }
+
+        .offer_info_wrapper .offer_info .offer_info_chatbtn {
+            height: 20px;
+        }
+
+        .lovely_p {
+            column-gap: 0.5rem;
+        }
+
+        button.operation_btn {
+            padding: 4px;
+        }
+
+        .offer_info_wrapper .offer_info_book_price p.offer_book {
+            font-size: 12px;
+        }
+
+        .offer_info_wrapper .offer_info_book_price p.offer_price {
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .offer_info_wrapper .offer_info_sum p.offer_price_sum,
+        .offer_info_wrapper .offer_info_sum p.offer_sum {
+            font-size: 12px;
+        }
+    }
+
+    @media only screen and (max-width:520px) {
+        #message_send::after {
+            width: 22px;
+            height: 22px;
+        }
+
+        .offer_info_wrapper .offer_info_book_price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1rem;
+        }
+
+        .operation_btn {
+            padding: 0.5rem 0.2rem;
+            font-size: 10px;
+        }
+    }
+
+    @media only screen and (max-width:450px) {
+        .customer_box {
+            padding: 1rem;
+        }
+
+        .chat_box .input_box {
+            grid-template-columns: 80% 20%;
+        }
+
+        button.operation_btn {
+            padding: 0;
+            width: 24px;
+            height: 24px;
+        }
+    }
+}

@@ -1,0 +1,62 @@
+W przypadku wystawienia tego dzieła do internetu:
+-zmiana bazy na kiermasz_książek.sql
+-zmiana linku w declare buy-l.54
+-zmiana linku zmiany hasła
+-ustawić login i hasło admina
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
